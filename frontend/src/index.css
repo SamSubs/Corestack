@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-blue-500/50 transition-colors;
+}
+
+/* Utilities */
+.glass {
+  @apply bg-black/60 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent;
+}
